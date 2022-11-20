@@ -1,23 +1,35 @@
 <script>
+  import { Router, link, Route } from "svelte-routing";
+  import Home from "./routes/Home.svelte";
+  import How from "./routes/How.svelte";
+
   import hwguildLogo from "./assets/hwguild.svg";
-  import Upload from "./lib/Upload.svelte";
+
+  export let url = "";
 </script>
 
 <main>
   <div>
-    <img src={hwguildLogo} class="logo" alt="Svelte Logo" />
+    <a href="/" use:link>
+      <img src={hwguildLogo} class="logo" alt="HW guild Logo" />
+    </a>
   </div>
-  <h1>Lag din egen pepperkakeform</h1>
-
-  <div class="card">
-    <Upload/>
-  </div>
+  
+  <Router url="{url}">
+    <div>
+      <Route path="how" component="{How}" />
+      <Route path="/"><Home /></Route>
+    </div>
+  </Router>
+  
 </main>
 
 <style>
   .logo {
-    height: 18em;
-    padding: 1.5em;
-    will-change: filter;
+      height: 18em;
+      padding: 1.5em;
+      will-change: filter;
   }
 </style>
+
+
