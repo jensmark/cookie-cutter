@@ -5,20 +5,20 @@
 
   import hwguildLogo from "./assets/hwguild.svg";
 
-  export let url = "";
+  export let url = "cookie-cutter/";
 </script>
 
 <main>
   <div>
-    <a href="/" use:link>
+    <a href="/cookie-cutter/" use:link>
       <img src={hwguildLogo} class="logo" alt="HW guild Logo" />
     </a>
   </div>
   
   <Router url="{url}">
     <div>
-      <Route path="how" component="{How}" />
-      <Route path="/"><Home /></Route>
+      <Route path="/cookie-cutter/how" component="{How}" />
+      <Route path="/cookie-cutter/"><Home /></Route>
     </div>
   </Router>
   

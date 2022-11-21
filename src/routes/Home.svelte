@@ -10,6 +10,6 @@
         <Upload />
     </div>
 
-    <h3><Link to="how">Hvordan funker dette?</Link></h3>
+    <h3><Link to="/cookie-cutter/how">Hvordan funker dette?</Link></h3>
 </main>
 
